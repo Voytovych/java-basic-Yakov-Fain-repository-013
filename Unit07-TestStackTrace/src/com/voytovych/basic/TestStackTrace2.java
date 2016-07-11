@@ -1,4 +1,4 @@
-package com.voytovych.basic;
+  package com.voytovych.basic;
 
 class TestStackTrace2{    
    TestStackTrace2()
