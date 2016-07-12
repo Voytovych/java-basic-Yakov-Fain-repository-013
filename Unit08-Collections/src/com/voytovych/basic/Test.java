@@ -16,6 +16,16 @@ public class Test {
 		customers.add(cust2);
 		
 		Customer theBestCustomer = (Customer) customers.get(0);
+		
+		Order ord = new Order();
+		customers.add(ord);
+		
+		int totalElem = customers.size();
+		for (int i = 0; i < totalElem; i++) {
+			Customer currentCust = (Customer) customers.get(i); // Exception in thread "main" java.lang.ClassCastException
+			System.out.println("The current customer is " + currentCust.lastName);
+		}
+		
 
 	}
 
