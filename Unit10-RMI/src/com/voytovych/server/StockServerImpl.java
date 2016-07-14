@@ -1,6 +1,7 @@
 package com.voytovych.server;
 
 import java.rmi.*;
+import java.rmi.registry.LocateRegistry;
 import java.rmi.server.*;      
 import java.util.ArrayList;
 
@@ -10,7 +11,7 @@ public class StockServerImpl extends UnicastRemoteObject  implements StockServer
 
   public StockServerImpl() throws RemoteException {
     super();
-   
+   LocateRegistry.createRegistry(1099);
     // Define some hard-coded NASDAQ symbols 
     nasdaqSymbols.add("AAPL");
     nasdaqSymbols.add("MSFT");
