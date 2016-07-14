@@ -4,7 +4,7 @@ public class ReflectionSample {
   @SuppressWarnings("rawtypes")
 public static void main(String args[]) {
      try {
-       Class c = Class.forName("com.practicaljava.lesson24.Employee");
+       Class c = Class.forName("com.voytovych.basic.Employee");
        Method methods[] = c.getDeclaredMethods();
        System.out.println("The  Employee methods:");
 
