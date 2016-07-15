@@ -30,8 +30,17 @@ public class FindBooks extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		//Getting data from the browser
+		String title = request.getParameter("booktitle");
+		
 		PrintWriter out = response.getWriter();
-		out.println("Hello from FindsBooks");
+		response.setContentType("text/html");
+		
+		//Sending HTML content to the browser
+		out.println("<html><body>");
+		out.println("<h2>the book "+ title + " costs only $65");
+		out.println("<p>Please enter your credit card number</p>");
+		out.println("</body></html>");
 	}
 
 	/**
